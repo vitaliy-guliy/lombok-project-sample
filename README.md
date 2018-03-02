@@ -4,4 +4,4 @@
 
 #### You can see a small tutorial of Lombok Proyect an other Java libraries (in spanish) at: https://codesolt.com/tutoriales/
 
-Feel free to reach me at: carlos.salazar@codesolt.com or find more about me at: https://carlos-salazar.com/
+Feel free to reach me at: carlos.salazar@codesolt.com or find out more about me at: https://carlos-salazar.com/ :)
