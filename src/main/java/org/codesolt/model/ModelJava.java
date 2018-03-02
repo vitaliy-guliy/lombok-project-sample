@@ -1,16 +1,16 @@
-package org.codesolt;
+package org.codesolt.model;
 
 import org.apache.log4j.Logger;
 
-public class ModelImp implements ModelInterface {
+public class ModelJava {
 
-	private static final Logger log = Logger.getLogger(ModelImp.class);
+	private static final Logger log = Logger.getLogger(ModelJava.class);
 	
 	private String stringValue;
 	private Integer integerValue;
 	private static final Double doubleValue = calculateDoubleValue();
 	
-	public ModelImp(String stringValue, Integer integerValue) {
+	public ModelJava(String stringValue, Integer integerValue) {
 		super();
 		this.stringValue = stringValue;
 		if(integerValue != null)
@@ -34,7 +34,11 @@ public class ModelImp implements ModelInterface {
 			this.integerValue = integerValue;
 		throw new NullPointerException("integerValue");
 	}
-
+	
+	public Double getDoubleValue() {
+		return doubleValue;
+	}
+	
 	private static Double calculateDoubleValue() {
 		log.info("Calculating double value");
 		double a = 2.0;
@@ -60,7 +64,7 @@ public class ModelImp implements ModelInterface {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		ModelImp other = (ModelImp) obj;
+		ModelJava other = (ModelJava) obj;
 		if (integerValue == null) {
 			if (other.integerValue != null)
 				return false;

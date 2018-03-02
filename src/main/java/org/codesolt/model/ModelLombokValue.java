@@ -1,21 +1,19 @@
-package org.codesolt;
+package org.codesolt.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NonNull;
 import lombok.Value;
-import lombok.experimental.NonFinal;
 import lombok.extern.log4j.Log4j;
 
 @Log4j
 @Value
 @AllArgsConstructor
-public class ModelLombokValue implements ModelInterface {
+public class ModelLombokValue {
 	
-	@NonFinal private String stringValue;
+	private String stringValue;
 	@NonNull private Integer integerValue;
 	@Getter(lazy=true) private static final Double doubleValue = calculateDoubleValue();
-
 	
 	private static Double calculateDoubleValue() {
 		log.info("Calculating double value");
