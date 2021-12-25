@@ -19,7 +19,12 @@ components:
       volumeMounts:
         - name: m2
           path: /home/jboss/.m2
+        - name: gradle
+          path: /home/jboss/.gradle
   - name: m2
+    volume:
+      size: 1G
+  - name: gradle
     volume:
       size: 1G
 commands:
