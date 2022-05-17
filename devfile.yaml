@@ -6,11 +6,6 @@ components:
     container:
       image: quay.io/devspaces/udi-rhel8:3.1
       memoryLimit: 3Gi
-      env:
-        - name: JAVA_OPTS
-          value: "-XX:MaxRAMPercentage=50.0 -XX:+UseParallelGC -XX:MinHeapFreeRatio=10 -XX:MaxHeapFreeRatio=20 -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xms20m -Djava.security.egd=file:/dev/./urandom -Duser.home=/home/jboss"
-        - name: MAVEN_OPTS
-          value: $(JAVA_OPTS)
       endpoints:
         - exposure: none
           name: debug
@@ -18,13 +13,8 @@ components:
           targetPort: 5005
       volumeMounts:
         - name: m2
-          path: /home/jboss/.m2
-        - name: gradle
-          path: /home/jboss/.gradle
+          path: /home/user/.m2
   - name: m2
-    volume:
-      size: 1G
-  - name: gradle
     volume:
       size: 1G
 commands:
