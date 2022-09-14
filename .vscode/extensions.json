@@ -3,6 +3,8 @@
   // for the documentation about the extensions.json format
   "recommendations": [
     "redhat.java",
-    "redhat.dependency-analytics"
+    "vscjava.vscode-java-debug",
+    "vscjava.vscode-java-test",
+    "redhat.fabric8-analytics"
   ]
 }
