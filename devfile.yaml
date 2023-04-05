@@ -4,7 +4,7 @@ metadata:
 components:
   - name: tools
     container:
-      image: registry.redhat.io/devspaces/udi-rhel8:3.6
+      image: registry.redhat.io/devspaces/udi-rhel8:3.7
       memoryLimit: 3Gi
       endpoints:
         - exposure: none
