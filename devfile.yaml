@@ -4,7 +4,8 @@ metadata:
 components:
   - name: tools
     container:
-      image: registry.redhat.io/devspaces/udi-rhel8:3.10
+      # image: registry.redhat.io/devspaces/udi-rhel8:3.10
+      image: registry.redhat.io/devspaces/udi-rhel8@sha256:445400718dbc8bc69f6081a6974980f784e53f5fbe256ee3261c08a6d31040b2
       memoryLimit: '3Gi'
       memoryRequest: '2Gi'
       cpuLimit: '4'
